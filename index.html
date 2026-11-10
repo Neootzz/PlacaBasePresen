@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d17">
+  <title>ASUS ROG STRIX Z370-E GAMING · Placa base interactiva</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="info-panel" id="info-panel" aria-hidden="true" aria-live="polite">
+      <div class="panel-topline"><span class="status-dot"></span> EXPLORADOR DE PLACA BASE</div>
+      <button class="back-button" id="back-button" type="button" aria-label="Volver a la vista completa">← <span>Vista completa</span></button>
+      <div class="component-copy">
+        <p class="category" id="component-category"></p>
+        <h1 id="component-title" tabindex="-1">Selecciona un componente</h1>
+        <p class="description" id="component-description">Pulsa un marcador de la placa para ver su función y acercarte a esa zona.</p>
+        <p class="fact" id="component-fact"></p>
+      </div>
+      <div class="panel-bottom">
+        <div class="component-navigation">
+          <button class="nav-button" id="previous-button" type="button" aria-label="Componente anterior">←</button>
+          <span id="component-count">01 / 14</span>
+          <button class="nav-button" id="next-button" type="button" aria-label="Componente siguiente">→</button>
+        </div>
+        <span class="panel-hint">Arrastra la placa para girarla</span>
+      </div>
+    </aside>
+
+    <main class="scene" aria-label="Modelo 3D interactivo de la placa base">
+      <div class="scene-label" id="scene-label" aria-live="polite">
+        <span class="scene-label-kicker">PLACA BASE</span>
+        <span class="scene-label-title">ASUS ROG STRIX Z370-E GAMING</span>
+        <span class="scene-label-line"></span>
+      </div>
+      <model-viewer
+        id="board"
+        src="motherboard__components.glb"
+        alt="Modelo 3D de una placa base con componentes interactivos"
+        camera-controls
+        loading="eager"
+        interaction-prompt="none"
+        camera-orbit="0deg 88deg 130%"
+        camera-target="0m 0m -7.8m"
+        field-of-view="34deg"
+        interpolation-decay="240"
+        shadow-intensity="0.35"
+        exposure="0.72"
+        environment-image="neutral"
+        tone-mapping="neutral">
+
+        <button class="hotspot" slot="hotspot-cpu" data-position="0.69 1.92 -7.80" data-zoom="2.8m" data-normal="0 0 1" data-component="cpu" aria-label="Procesador">01<span class="hotspot-label">Procesador</span></button>
+        <button class="hotspot" slot="hotspot-ram" data-position="3.23 1.92 -7.34" data-zoom="3.5m" data-normal="0 0 1" data-component="ram" aria-label="Módulo de memoria RAM">02<span class="hotspot-label">Memoria RAM</span></button>
+        <button class="hotspot" slot="hotspot-chipset" data-position="2.64 -1.93 -7.73" data-zoom="3.4m" data-normal="0 0 1" data-component="chipset" aria-label="Chipset">03<span class="hotspot-label">Chipset</span></button>
+        <button class="hotspot" slot="hotspot-pcie" data-position="0.45 -1.55 -7.65" data-zoom="4.7m" data-normal="0 0 1" data-component="pcie" aria-label="Ranura PCIe x16 para tarjeta gráfica">04<span class="hotspot-label">PCIe gráfica</span></button>
+        <button class="hotspot hotspot-io" slot="hotspot-io" data-position="-3.05 2.46 -7.34" data-zoom="3.5m" data-normal="0 0 1" data-component="io" aria-label="Puertos traseros USB y de vídeo">05<span class="hotspot-label">Puertos traseros</span></button>
+        <button class="hotspot hotspot-audio" slot="hotspot-audio" data-position="-3.13 0.25 -7.45" data-zoom="2.6m" data-normal="0 0 1" data-component="audio" aria-label="Conectores de audio">06<span class="hotspot-label">Audio</span></button>
+        <button class="hotspot hotspot-battery" slot="hotspot-battery" data-position="-0.36 -1.59 -7.77" data-zoom="2.4m" data-normal="0 0 1" data-component="battery" aria-label="Pila CMOS">07<span class="hotspot-label">Pila CMOS</span></button>
+        <button class="hotspot hotspot-ssd" slot="hotspot-ssd" data-position="0.11 -0.40 -7.64" data-zoom="2.7m" data-normal="0 0 1" data-component="ssd" aria-label="Unidad SSD M.2">08<span class="hotspot-label">SSD M.2</span></button>
+        <button class="hotspot hotspot-bios" slot="hotspot-bios" data-position="0.43 -1.82 -7.94" data-zoom="2.2m" data-normal="0 0 1" data-component="bios" aria-label="Chip BIOS o UEFI">09<span class="hotspot-label">BIOS / UEFI</span></button>
+        <button class="hotspot hotspot-sata" slot="hotspot-sata" data-position="3.80 0.27 -7.86" data-zoom="2.7m" data-normal="0 0 1" data-component="sata" aria-label="Conectores SATA">10<span class="hotspot-label">SATA</span></button>
+        <button class="hotspot hotspot-power" slot="hotspot-power" data-position="4.08 1.93 -7.86" data-zoom="2.7m" data-normal="0 0 1" data-component="power24" aria-label="Conector de alimentación ATX de 24 pines">11<span class="hotspot-label">ATX 24 pines</span></button>
+        <button class="hotspot hotspot-socket" slot="hotspot-socket" data-position="0.08 2.62 -7.78" data-zoom="2.6m" data-normal="0 0 1" data-component="socket" aria-label="Socket del procesador">12<span class="hotspot-label">Socket CPU</span></button>
+        <button class="hotspot hotspot-eps" slot="hotspot-eps" data-position="-0.35 3.25 -7.72" data-zoom="2.7m" data-normal="0 0 1" data-component="eps8" aria-label="Conector EPS de alimentación de 8 pines">13<span class="hotspot-label">EPS 8 pines</span></button>
+        <button class="hotspot hotspot-fan" slot="hotspot-fan" data-position="4.05 3.53 -7.78" data-zoom="2.5m" data-normal="0 0 1" data-component="fan" aria-label="Conector del ventilador de CPU">14<span class="hotspot-label">CPU_FAN</span></button>
+
+        <button class="selected-hotspot" id="selected-hotspot" slot="hotspot-selected" type="button" aria-hidden="true" tabindex="-1"><span id="selected-hotspot-label"></span></button>
+      </model-viewer>
+    </main>
+  </div>
+</body>
+</html>
